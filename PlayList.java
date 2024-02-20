@@ -41,7 +41,7 @@ class PlayList {
      *  Otherwise, appends the track and returns true. */
     public boolean add(Track track) {
         //// replace the following statement with your code
-        if (canAdd()){
+        if (canAdd()){// NICE!
             tracks[size] = track;
             size++;
             return true;
@@ -65,6 +65,8 @@ class PlayList {
         if (size != 0)
             size--;
             //tracks[size-1] = emptyTrack;
+
+             /* you shuld have made tracks[size-1] = null */ 
     }
     
     /** Returns the total duration (in seconds) of all the tracks in this list.*/
@@ -95,6 +97,9 @@ class PlayList {
      *  is full, does nothing and returns false. Otherwise, inserts the track and
      *  returns true. */
     public boolean add(int i, Track track) {
+        /* We usually dont like to put the entire code function inside an if
+        we go on negation, if not the condition then return false, otherwise the code of the function. 
+        */
         if (canAdd() && i >= 0 && i <= size){
             Track temp1 = tracks[i];
             for (int j = (i + 1); j < (size + 1); j++){
